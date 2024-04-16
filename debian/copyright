@@ -3,11 +3,11 @@ Source: https://pypi.python.org/pypi/sphinxcontrib-websupport
 Upstream-Name: sphinxcontrib-websupport
 
 Files: *
-Copyright: 2007-2020, the Sphinx team
+Copyright: 2007-2024, the Sphinx team
 License: BSD-2-clause
 
 Files: debian/*
-Copyright: 2017-2020, Dmitry Shachnev <mitya57@debian.org>
+Copyright: 2017-2024, Dmitry Shachnev <mitya57@debian.org>
 License: BSD-2-clause
 
 License: BSD-2-clause
