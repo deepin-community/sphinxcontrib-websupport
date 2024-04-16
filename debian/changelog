@@ -1,3 +1,47 @@
+sphinxcontrib-websupport (1.2.7-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Drop all patches, applied upstream.
+  * Bump copyright years.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Sat, 13 Jan 2024 20:06:07 +0300
+
+sphinxcontrib-websupport (1.2.6-2) unstable; urgency=medium
+
+  * Add patches to fix build with Sphinx 7.2 and SQLAlchemy 2.0.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Sun, 29 Oct 2023 18:44:36 +0300
+
+sphinxcontrib-websupport (1.2.6-1) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit.
+  * Update standards version to 4.6.2, no changes needed.
+
+  [ Dmitry Shachnev ]
+  * New upstream release.
+  * Build-depend on flit instead of setuptools.
+  * Remove no longer needed PYBUILD_AFTER_BUILD command.
+  * Bump required python3-sphinx version to >= 5.
+  * Update debian/watch.
+    - Change version from 3 to 4.
+    - Stop checking upstream signature, PyPI dropped support for it.
+    - Update the file name pattern to use underscore.
+  * Add a patch to fix test failures (closes: #1052779).
+  * Bump copyright years.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Sat, 30 Sep 2023 21:09:52 +0300
+
+sphinxcontrib-websupport (1.2.4-2) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Update Maintainer field with new Debian Python Team
+    contact address.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+ -- Sandro Tosi <morph@debian.org>  Sat, 04 Jun 2022 20:51:42 -0400
+
 sphinxcontrib-websupport (1.2.4-1) unstable; urgency=medium
 
   * New upstream release.

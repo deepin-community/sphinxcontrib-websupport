@@ -1,25 +1,16 @@
-# -*- coding: utf-8 -*-
 """
-    sphinxcontrib.websupport.storage.sqlalchemy_db
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-    SQLAlchemy table and mapper definitions used by the
-    :class:`sphinxcontrib.websupport.storage.sqlalchemystorage.SQLAlchemyStorage`.
-
-    :copyright: Copyright 2007-2016 by the Sphinx team, see AUTHORS.
-    :license: BSD, see LICENSE for details.
+SQLAlchemy table and mapper definitions used by the
+:py:class:`sphinxcontrib.websupport.storage.sqlalchemystorage.SQLAlchemyStorage`.
 """
+
+from __future__ import annotations
 
 from datetime import datetime
 
 from sqlalchemy import Column, Integer, Text, String, Boolean, \
     ForeignKey, DateTime
-from sqlalchemy.orm import relation, sessionmaker, aliased
-from sqlalchemy.ext.declarative import declarative_base
-
-if False:
-    # For type annotation
-    from typing import List  # NOQA
+from sqlalchemy.orm import relationship, sessionmaker, aliased, \
+    declarative_base
 
 Base = declarative_base()
 Session = sessionmaker()
@@ -78,7 +69,7 @@ class Node(Base):  # type: ignore
         :param results: the flat list of comments
         :param username: the name of the user requesting the comments.
         """
-        comments = []  # type: List
+        comments = []
         list_stack = [comments]
         for r in results:
             if username:
@@ -136,10 +127,10 @@ class Comment(Base):  # type: ignore
     path = Column(String(256), index=True)
 
     node_id = Column(String(32), ForeignKey(db_prefix + 'nodes.id'))
-    node = relation(Node, backref="comments")
+    node = relationship(Node, backref="comments")
 
-    votes = relation(CommentVote, backref="comment",
-                     cascade="all")
+    votes = relationship(CommentVote, backref="comment",
+                         cascade="all")
 
     def __init__(self, text, displayed, username, rating, time,
                  proposal, proposal_diff):

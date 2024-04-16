@@ -1,6 +1,4 @@
 #!/usr/bin/make -f
 
-export PYBUILD_AFTER_BUILD=rm {build_dir}/sphinxcontrib/__init__.py
-
 %:
 	dh $@ --with python3 --buildsystem=pybuild

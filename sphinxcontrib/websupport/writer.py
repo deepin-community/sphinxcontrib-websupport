@@ -1,17 +1,8 @@
-# -*- coding: utf-8 -*-
-"""
-    sphinxcontrib.websupport.writer
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-    sphinxcontrib.websupport writer that adds comment-related annotations.
-
-    :copyright: Copyright 2007-2016 by the Sphinx team, see AUTHORS.
-    :license: BSD, see LICENSE for details.
-"""
+"""websupport writer that adds comment-related annotations."""
 
 from sphinx.writers.html import HTMLTranslator
 
-from .utils import is_commentable
+from sphinxcontrib.websupport.utils import is_commentable
 
 
 class WebSupportTranslator(HTMLTranslator):

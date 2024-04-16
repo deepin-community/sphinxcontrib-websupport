@@ -1,3 +1,2 @@
-version=3
-opts=pgpsigurlmangle=s/$/.asc/ \
-https://pypi.debian.net/sphinxcontrib-websupport/sphinxcontrib-websupport-([\d.]+)\.tar\.gz
+version=4
+https://pypi.debian.net/sphinxcontrib-websupport/sphinxcontrib_websupport-([\d.]+)\.tar\.gz
